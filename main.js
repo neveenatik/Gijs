@@ -1,12 +1,16 @@
 let i = 0;
 let speed = 50; 
 let intervalId;
-let typing;
-let typing2;
+let typing = document.getElementById("typing");
 let txt1 = 'In Dutch! I have no clue. But to me ...';
 let txt2 = 'What do you think he will do next?'
-let pulseSnd;
-let introSnd;
+let pulseSnd = new Audio("./file.mp3");
+let introSnd = new Audio("./intro.wav");
+
+//preloads so it can start on page;
+pulseSnd.preload = "auto";
+introSnd.preload = "auto";
+
 //defining start, reset and question button
 let question = document.getElementById("question");
 let start = document.querySelector(".start");
@@ -16,9 +20,13 @@ reset.addEventListener("click", loadPage);
 loadPage();
 
 function loadPage() {
+  i = 0;
+  typing.innerHTML = "";  
+  question.removeAttribute("style");
+  start.style.display = "block";
   document.getElementById("container-content").setAttribute("hidden", "true");
   document.getElementById("container-cards").setAttribute("hidden", "true");
-  //Listening on button click to trigger page and audio for UX
+  //Listening on button click to trigger page and audio
   start.addEventListener("click", function (e) {
     e.preventDefault();
     document.querySelector("#container-content").removeAttribute("hidden");
@@ -26,7 +34,6 @@ function loadPage() {
     pulse();
     setTimeout(startPage, 4000);
     setTimeout(stopPulse, 3000);
-    introSnd = new Audio("./intro.wav");
     introSnd.preload = "auto";
     setTimeout(function () {
       introSnd.play();
@@ -36,19 +43,18 @@ function loadPage() {
 }
 
 function startPage() {
-
-  typing = document.getElementById("typing");
   startTyping(txt1, typing);
-
+  
   introSnd.addEventListener("ended", function (){
     i = 0;
     typing.innerHTML = "";    
     startTyping(txt2, typing);
-    pulse.play()
-
+    pulseSnd.play()
+    setTimeout(stopPulse, 6000);
     question.style.visibility = "visible";
   });
   question.addEventListener("click", (e)=> {
+    stopPulse();
     e.preventDefault();
     document.getElementById("result").classList.add("show");
     document.getElementById("result").addEventListener("click", ()=>{
@@ -68,10 +74,7 @@ function startTyping(text, elem) {
 
 function pulse() {
   document.querySelector(".pulse").style.animation = "pulse linear 1s infinite";
-  pulseSnd = new Audio("./file.mp3"); // buffers automatically when created
-  pulseSnd.preload = "auto";
   pulseSnd.play();
-  setTimeout(stopPulse, 6000);
 }
 
 function stopPulse() {
