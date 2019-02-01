@@ -49,6 +49,8 @@ img.w-40{
   left: 10%;
   top: 0;
   text-align: left;
+  font-size: 20px;
+  letter-spacing: 1.1px;
 }
 
 .carousel-indicators {
@@ -89,13 +91,13 @@ img.w-40{
 	position: relative;
   font-size: 24px;
   font-weight: bold;
-	transition: all 3s ease-in-out;
+	transition: all 5s ease-in-out;
 }
 
 
 @keyframes pulse {
 	0% { font-size:32px; } 
-	50% { font-size:34px; } 
+	50% { font-size:36px; } 
 	100% { font-size:32px; }
 }
 
