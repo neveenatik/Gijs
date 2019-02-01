@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gijs Tribute</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button type="reset" class="start btn btn-lg btn-primary">Start Page</button>
+  <div id="container-content" class="container" hidden="true">
+    <h1 class="pulse-container">What does <span class="pulse"> Gijs </span> mean?</h1>
+    <p id="typing"></p>
+    <button role="button" href="#" id="question" class="btn btn-lg btn-info" >Check this out</button>
+  </div>
+  <div id="container-cards" class="carousel slide" data-ride="carousel" hidden="true">
+    <ol class="carousel-indicators">
+      <li data-target="#container-cards" data-slide-to="0" class="active"></li>
+      <li data-target="#container-cards" data-slide-to="1"></li>
+      <li data-target="#container-cards" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-interval="12000">
+        <img src="/meeting.jpg" class="w-40" alt="head picture">
+        <div class="carousel-caption">
+          <h5>First video interview <time datetime="2018-03-07">8 March 2018 16:40</time></h5>
+          <p>The first person te intreview me on video together with Maartje.
+            btw I believe this is the first pic we see doing the ajax call assignment :P
+          </p>
+        </div>
+      </div>
+      <div class="carousel-item" data-interval="12000">
+        <img src="/rsz_chance.jpg" class="w-40" alt="people discussing around the table">
+        <div class="carousel-caption">
+          <h5>First chance <time datetime="2018-03-21">21 March 2018 12:00</time></h5>
+          <p>Part of the first team who gave me the chance to do what I enjoy rather than what I should do. And made me feel that what I say is heard and matters.</p>
+        </div>
+      </div>
+      <div class="carousel-item" data-interval="12000">
+        <img src="./rsz_acceptance.jpg" class="w-40" alt="man and woman greeting by pointing to heart">
+        <div class="carousel-caption">
+          <h5>First acceptance <time datetime="2018-10-28">28 October 2018 13:30</time></h5>
+          <p>The first person to offer me the greeting of my culture pointing to the heart and no hand shaking. That moment I felt that I am completely accepted in the new country I am living in.</p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#container-cards" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#container-cards" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  <div id="result">
+    <div class="popup">
+      <div class="content-1">
+        <img class="w-100" src="/gmt.jpg" width="650">
+      </div>
+      <div class="controlers">
+        <button role="button" class="btn btn-lg btn-info btn-block" type="submit">Play again</button>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript" src="main.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+</body>
+</html>

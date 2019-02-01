@@ -1,0 +1,105 @@
+body {
+  background-color: rgb(7, 8, 68);
+  color: white;
+  width: 100vw;
+  height: 100vh;
+}
+
+.pulse-container, #typing, #typing2 {
+  width: fit-content;
+  margin: 25px auto;
+  font-size: 32px;
+} 
+
+
+button[type="reset"] {
+  padding: 50px;
+  font-size: 32px;
+  display: block;
+  width: fit-content;
+  margin: 0 auto 10px auto;
+  position: relative;
+  top: calc(50% - 132px);
+  border-radius: 10px;
+}
+
+/* .pulse {
+  animation: pulse linear .8s infinite;
+} */
+
+.card {
+  display: flex;
+  flex-direction: column; 
+}
+
+.card p {
+  flex: 1 1 auto;
+}
+
+time {
+  opacity: 0.5;
+  font-size: 0.8em;
+}
+
+img.w-40{
+  overflow: hidden;
+  transition: all ease 0.5s;
+  position: relative;
+  left: 60%;
+}
+
+.carousel-caption {
+  width: 40%;
+  left: 10%;
+  top: 0;
+  text-align: left;
+}
+
+.carousel-indicators {
+  position: fixed;
+}
+
+#question {
+  visibility: hidden;
+  width: fit-content;
+  margin: 0 auto 50px auto;
+  text-align: center;
+  display: block;
+}
+
+#result {
+  position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+  right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+  opacity: 0;
+  z-index: 1000;
+}
+
+.show {
+	visibility: visible !important;
+	opacity: 1 !important;
+}
+
+.popup {
+  margin: 7.5% auto;
+	border-radius: 5px;
+  width: 80%;
+  height: 90%;
+	position: relative;
+  font-size: 24px;
+  font-weight: bold;
+	transition: all 3s ease-in-out;
+}
+
+
+@keyframes pulse {
+	0% { font-size:32px; } 
+	50% { font-size:34px; } 
+	100% { font-size:32px; }
+}
+
