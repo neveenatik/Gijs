@@ -19,7 +19,7 @@ start.addEventListener("click", function(e){
   pulse();
   setTimeout(startPage, 4000);
   setTimeout(stopPulse, 3000);
-  introSnd = new Audio("/asset/intro.wav");
+  introSnd = new Audio("./asset/intro.wav");
   setTimeout(function() { 
     introSnd.play(); 
     document.getElementById("container-cards").removeAttribute("hidden");
@@ -57,7 +57,7 @@ function startTyping(text, elem) {
 
 function pulse() {
   document.querySelector(".pulse").style.animation = "pulse linear 1s infinite";
-  pulseSnd = new Audio("/asset/file.mp3"); // buffers automatically when created
+  pulseSnd = new Audio("./asset/file.mp3"); // buffers automatically when created
   pulseSnd.play();
 }
 
