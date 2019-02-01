@@ -23,10 +23,6 @@ button[type="reset"] {
   border-radius: 10px;
 }
 
-/* .pulse {
-  animation: pulse linear .8s infinite;
-} */
-
 .card {
   display: flex;
   flex-direction: column; 
@@ -86,10 +82,10 @@ img.w-40{
 }
 
 .popup {
-  margin: 5% auto;
+  margin: 2vh auto;
 	border-radius: 5px;
-  width: 80%;
-  height: 90%;
+  width: 80vw;
+  height: 90vh;
 	position: relative;
   font-size: 24px;
   font-weight: bold;
